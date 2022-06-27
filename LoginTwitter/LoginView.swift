@@ -3,9 +3,9 @@ import Sweet
 
 struct LoginView: View {
   @Environment(\.openURL) var openURL
-  @State var userBearerToken: String?
-  @State var refreshToken: String?
-  @State var expireDate: Date?
+  @State var userBearerToken: String? = Secret.userBearerToken
+  @State var refreshToken: String? = Secret.refreshToken
+  @State var expireDate: Date? = Secret.expireDate
   @State var me: Sweet.UserModel?
 
   func getRandomString() -> String {
@@ -31,9 +31,12 @@ struct LoginView: View {
   }
 
   func callBackURL(url: URL) async {
-    try? await DeepLink().loginTwitter(url)
-    getSecureData()
-
+    do {
+      try await DeepLink().loginTwitter(url)
+      getSecureData()
+    } catch {
+      print(error)
+    }
   }
 
   func getSecureData() {
@@ -51,20 +54,46 @@ struct LoginView: View {
     }
   }
 
+  func logout() {
+    Secret.userBearerToken = nil
+    Secret.refreshToken = nil
+    Secret.expireDate = nil
+
+    userBearerToken = nil
+    refreshToken = nil
+    expireDate = nil
+
+    me = nil
+  }
+
   var body: some View {
     VStack {
+
       Button("Login") {
         let url = getAuthorizeURL()
         openURL(url)
       }
+      .padding()
 
       if userBearerToken != nil && refreshToken != nil && expireDate != nil {
+        Button("Logout") {
+          logout()
+        }
+        .padding()
+
         Button("Get Me") {
           Task {
             await getMe()
           }
         }
+        .padding()
       }
+
+      if let me {
+        Text("id: \(me.id)")
+        Text("@\(me.userName)")
+        Text(me.name)
+       }
     }
 
     .onOpenURL { url in
