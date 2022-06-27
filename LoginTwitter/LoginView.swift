@@ -111,8 +111,12 @@ struct LoginView: View {
       if let expireDate {
         Text("expire Date")
         Text(expireDate, format: .iso8601)
-      }
 
+        Text("now Date")
+        TimelineView(.periodic(from: .now, by: 1)) { context in
+          Text(context.date, format: .iso8601)
+        }
+      }
     }
 
     .onOpenURL { url in
