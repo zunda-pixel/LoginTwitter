@@ -11,6 +11,16 @@
 		2E4B6AAA286969A100991438 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4B6AA9286969A100991438 /* ContentView.swift */; };
 		2E4B6AAC286969A300991438 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E4B6AAB286969A300991438 /* Assets.xcassets */; };
 		2E4B6AB0286969A300991438 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E4B6AAF286969A300991438 /* Preview Assets.xcassets */; };
+		2E4B6AB7286969D800991438 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4B6AB6286969D800991438 /* LoginView.swift */; };
+		2E4B6ABA28696A1600991438 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 2E4B6AB928696A1600991438 /* KeychainAccess */; };
+		2E4B6ABD28696A2600991438 /* Sweet in Frameworks */ = {isa = PBXBuildFile; productRef = 2E4B6ABC28696A2600991438 /* Sweet */; };
+		2E4B6ABF28696A6200991438 /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4B6ABE28696A6200991438 /* DeepLink.swift */; };
+		2E4B6AC128696A7200991438 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4B6AC028696A7200991438 /* Secret.swift */; };
+		2E4B6AC328696A7E00991438 /* SecurityRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4B6AC228696A7E00991438 /* SecurityRandom.swift */; };
+		2E4B6AC528696A8F00991438 /* Sweet+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4B6AC428696A8F00991438 /* Sweet+Extension.swift */; };
+		2E4B6AC728696AA100991438 /* TwitterOAuth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4B6AC628696AA100991438 /* TwitterOAuth2.swift */; };
+		2E4B6AC928696ABC00991438 /* TwitterScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4B6AC828696ABC00991438 /* TwitterScope.swift */; };
+		2E4B6ACB28696AD100991438 /* OAuth2ModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4B6ACA28696AD100991438 /* OAuth2ModelResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +30,14 @@
 		2E4B6AAB286969A300991438 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E4B6AAD286969A300991438 /* LoginTwitter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoginTwitter.entitlements; sourceTree = "<group>"; };
 		2E4B6AAF286969A300991438 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E4B6AB6286969D800991438 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2E4B6ABE28696A6200991438 /* DeepLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLink.swift; sourceTree = "<group>"; };
+		2E4B6AC028696A7200991438 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		2E4B6AC228696A7E00991438 /* SecurityRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityRandom.swift; sourceTree = "<group>"; };
+		2E4B6AC428696A8F00991438 /* Sweet+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sweet+Extension.swift"; sourceTree = "<group>"; };
+		2E4B6AC628696AA100991438 /* TwitterOAuth2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterOAuth2.swift; sourceTree = "<group>"; };
+		2E4B6AC828696ABC00991438 /* TwitterScope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterScope.swift; sourceTree = "<group>"; };
+		2E4B6ACA28696AD100991438 /* OAuth2ModelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2ModelResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E4B6ABA28696A1600991438 /* KeychainAccess in Frameworks */,
+				2E4B6ABD28696A2600991438 /* Sweet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +74,14 @@
 			children = (
 				2E4B6AA7286969A100991438 /* LoginTwitterApp.swift */,
 				2E4B6AA9286969A100991438 /* ContentView.swift */,
+				2E4B6ABE28696A6200991438 /* DeepLink.swift */,
+				2E4B6AC828696ABC00991438 /* TwitterScope.swift */,
+				2E4B6ACA28696AD100991438 /* OAuth2ModelResponse.swift */,
+				2E4B6AC028696A7200991438 /* Secret.swift */,
+				2E4B6AC228696A7E00991438 /* SecurityRandom.swift */,
+				2E4B6AC428696A8F00991438 /* Sweet+Extension.swift */,
+				2E4B6AC628696AA100991438 /* TwitterOAuth2.swift */,
+				2E4B6AB6286969D800991438 /* LoginView.swift */,
 				2E4B6AAB286969A300991438 /* Assets.xcassets */,
 				2E4B6AAD286969A300991438 /* LoginTwitter.entitlements */,
 				2E4B6AAE286969A300991438 /* Preview Content */,
@@ -85,6 +113,10 @@
 			dependencies = (
 			);
 			name = LoginTwitter;
+			packageProductDependencies = (
+				2E4B6AB928696A1600991438 /* KeychainAccess */,
+				2E4B6ABC28696A2600991438 /* Sweet */,
+			);
 			productName = LoginTwitter;
 			productReference = 2E4B6AA4286969A100991438 /* LoginTwitter.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +145,10 @@
 				Base,
 			);
 			mainGroup = 2E4B6A9B286969A100991438;
+			packageReferences = (
+				2E4B6AB828696A1600991438 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				2E4B6ABB28696A2600991438 /* XCRemoteSwiftPackageReference "Sweet" */,
+			);
 			productRefGroup = 2E4B6AA5286969A100991438 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +175,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E4B6AB7286969D800991438 /* LoginView.swift in Sources */,
+				2E4B6AC128696A7200991438 /* Secret.swift in Sources */,
+				2E4B6ACB28696AD100991438 /* OAuth2ModelResponse.swift in Sources */,
+				2E4B6AC328696A7E00991438 /* SecurityRandom.swift in Sources */,
+				2E4B6ABF28696A6200991438 /* DeepLink.swift in Sources */,
+				2E4B6AC728696AA100991438 /* TwitterOAuth2.swift in Sources */,
 				2E4B6AAA286969A100991438 /* ContentView.swift in Sources */,
+				2E4B6AC928696ABC00991438 /* TwitterScope.swift in Sources */,
+				2E4B6AC528696A8F00991438 /* Sweet+Extension.swift in Sources */,
 				2E4B6AA8286969A100991438 /* LoginTwitterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +386,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E4B6AB828696A1600991438 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		2E4B6ABB28696A2600991438 /* XCRemoteSwiftPackageReference "Sweet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zunda-pixel/Sweet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E4B6AB928696A1600991438 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E4B6AB828696A1600991438 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		2E4B6ABC28696A2600991438 /* Sweet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E4B6ABB28696A2600991438 /* XCRemoteSwiftPackageReference "Sweet" */;
+			productName = Sweet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E4B6A9C286969A100991438 /* Project object */;
 }
