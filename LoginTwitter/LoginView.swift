@@ -93,7 +93,26 @@ struct LoginView: View {
         Text("id: \(me.id)")
         Text("@\(me.userName)")
         Text(me.name)
-       }
+      }
+
+      if let userBearerToken {
+        Text("userBearerToken")
+        Text(userBearerToken)
+          .font(.system(size: 10))
+
+      }
+
+      if let refreshToken {
+        Text("refreshToken")
+        Text(refreshToken)
+          .font(.system(size: 10))
+      }
+
+      if let expireDate {
+        Text("expire Date")
+        Text(expireDate, format: .iso8601)
+      }
+
     }
 
     .onOpenURL { url in
