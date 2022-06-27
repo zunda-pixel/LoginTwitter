@@ -49,6 +49,8 @@ struct LoginView: View {
     do {
       let response = try await Sweet().lookUpMe()
       me = response.user
+      updateSecretData()
+
     } catch {
       print(error)
     }
@@ -59,11 +61,15 @@ struct LoginView: View {
     Secret.refreshToken = nil
     Secret.expireDate = nil
 
-    userBearerToken = nil
-    refreshToken = nil
-    expireDate = nil
-
+    updateSecretData()
+    
     me = nil
+  }
+
+  func updateSecretData() {
+    userBearerToken = Secret.userBearerToken
+    refreshToken = Secret.refreshToken
+    expireDate = Secret.expireDate
   }
 
   var body: some View {
