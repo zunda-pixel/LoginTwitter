@@ -3,8 +3,10 @@ import KeychainAccess
 import Sweet
 
 struct Secret {
-  
-  static let callBackURL: URL = .init(string: "tuna://")!
+  static let clientID = ""
+  static let clientSecretKey = ""
+
+  static let callBackURL: URL = .init(string: "loginTwitter://")!
 
   private static let expireDateKey = "expireDate"
   private static let refreshTokenKey = "refreshToken"
