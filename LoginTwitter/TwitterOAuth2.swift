@@ -55,7 +55,7 @@ struct TwitterOAuth2 {
 
     let url: URL = .init(string: "https://api.twitter.com/2/oauth2/token")!
 
-    let (data, urlResponse) = try await HTTPClient.post(
+    let (data, urlResponse) = try await URLSession.shared.post(
       url: url, headers: headers, queries: queries)
 
     if let response = try? JSONDecoder().decode(OAuth2ModelResponse.self, from: data) {
@@ -80,7 +80,7 @@ struct TwitterOAuth2 {
       "client_id": clientID,
     ]
 
-    let (data, urlResponse) = try await HTTPClient.post(url: url, queries: queries)
+    let (data, urlResponse) = try await URLSession.shared.post(url: url, queries: queries)
 
     if let response = try? JSONDecoder().decode(OAuth2ModelResponse.self, from: data) {
       return response
