@@ -92,7 +92,7 @@ struct LoginView: View {
         }
         .padding()
 
-        Button("Get Me") {
+        Button("Get My Profile") {
           Task {
             await getMe()
           }
@@ -119,6 +119,13 @@ struct LoginView: View {
         Text("now Date")
         TimelineView(.periodic(from: .now, by: 1)) { context in
           Text(context.date, format: .iso8601)
+        }
+      }
+    }
+    .onAppear {
+      Task {
+        if userBearerToken != nil && refreshToken != nil && expireDate != nil {
+          await getMe()
         }
       }
     }
