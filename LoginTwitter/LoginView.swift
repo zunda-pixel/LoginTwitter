@@ -74,6 +74,11 @@ struct LoginView: View {
 
   var body: some View {
     VStack {
+      if let me {
+        AccountView(user: me)
+          .padding()
+          .border(.cyan, width: 10)
+      }
 
       Button("Login") {
         let url = getAuthorizeURL()
@@ -95,17 +100,10 @@ struct LoginView: View {
         .padding()
       }
 
-      if let me {
-        Text("id: \(me.id)")
-        Text("@\(me.userName)")
-        Text(me.name)
-      }
-
       if let userBearerToken {
         Text("userBearerToken")
         Text(userBearerToken)
           .font(.system(size: 10))
-
       }
 
       if let refreshToken {
