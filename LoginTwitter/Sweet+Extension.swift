@@ -6,10 +6,7 @@ extension Sweet {
     let refreshToken = Secret.refreshToken!
     let response = try await TwitterOAuth2().getRefreshUserBearerToken(refreshToken: refreshToken)
 
-    var dateComponent = DateComponents()
-    dateComponent.second = response.expiredSeconds
-
-    let expireDate = Calendar.current.date(byAdding: dateComponent, to: Date())!
+    let expireDate = Date.now.addingTimeInterval(TimeInterval(response.expiredSeconds))
 
     Secret.refreshToken = response.refreshToken
     Secret.userBearerToken = response.bearerToken
@@ -19,7 +16,7 @@ extension Sweet {
   init() async throws {
     let expireDate = Secret.expireDate!
 
-    if expireDate < Date() {
+    if expireDate < .now {
       try await Sweet.updateUserBearerToken()
     }
 
@@ -28,8 +25,7 @@ extension Sweet {
     let appBearerToken = ""
 
     self.init(app: appBearerToken, user: userBearerToken, session: .shared)
-    self.tweetFields = [.id, .text, .attachments, .authorID, .contextAnnotations, .createdAt, .entities, .geo, .replyToUserID, .lang, .possiblySensitive, .referencedTweets, .replySettings, .source, .withheld, .publicMetrics]
-
-    self.mediaFields = [.mediaKey, .type, .height, .publicMetrics, .duration_ms, .previewImageURL, .url, .width, .altText]
+    self.tweetFields = Sweet.TweetField.allCases.filter { $0 != .privateMetrics && $0 != .promotedMetrics && $0 != .organicMetrics }
+    self.mediaFields = Sweet.MediaField.allCases.filter { $0 != .privateMetrics && $0 != .promotedMetrics && $0 != .organicMetrics}
   }
 }
