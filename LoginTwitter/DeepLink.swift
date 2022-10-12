@@ -21,7 +21,7 @@ struct DeepLink {
       return
     }
 
-    let response = try await TwitterOAuth2().getUserBearerToken(code: code, callBackURL: Secret.callBackURL, challenge: challenge)
+    let response = try await Sweet.OAuth2().getUserBearerToken(code: code, callBackURL: Secret.callBackURL, challenge: challenge)
 
     Secret.userBearerToken = response.bearerToken
     Secret.refreshToken = response.refreshToken

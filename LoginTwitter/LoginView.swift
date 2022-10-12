@@ -20,8 +20,8 @@ struct LoginView: View {
     let state = getRandomString()
     Secret.state = state
 
-    let url = TwitterOAuth2().getAuthorizeURL(
-      scopes: TwitterScope.allCases,
+    let url = Sweet.OAuth2().getAuthorizeURL(
+      scopes: Sweet.AccessScope.allCases,
       callBackURL: Secret.callBackURL,
       challenge: challenge,
       state: state

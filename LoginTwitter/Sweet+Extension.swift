@@ -4,7 +4,7 @@ import Sweet
 extension Sweet {
   static func updateUserBearerToken() async throws {
     let refreshToken = Secret.refreshToken!
-    let response = try await TwitterOAuth2().getRefreshUserBearerToken(refreshToken: refreshToken)
+    let response = try await Sweet.OAuth2().refreshUserBearerToken(with: refreshToken)
 
     let expireDate = Date.now.addingTimeInterval(TimeInterval(response.expiredSeconds))
 
@@ -27,5 +27,11 @@ extension Sweet {
     self.init(app: appBearerToken, user: userBearerToken, session: .shared)
     self.tweetFields = Sweet.TweetField.allCases.filter { $0 != .privateMetrics && $0 != .promotedMetrics && $0 != .organicMetrics }
     self.mediaFields = Sweet.MediaField.allCases.filter { $0 != .privateMetrics && $0 != .promotedMetrics && $0 != .organicMetrics}
+  }
+}
+
+extension Sweet.OAuth2 {
+  init() {
+    self.init(clientID: Secret.clientID, clientSecret: Secret.clientSecretKey)
   }
 }
