@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "httpclient",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/zunda-pixel/HTTPClient",
+      "state" : {
+        "revision" : "81a450543208108c0094cf3092a0b170e65a9d1b",
+        "version" : "1.3.3"
+      }
+    },
+    {
+      "identity" : "httpmethod",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/thii/HTTPMethod",
+      "state" : {
+        "revision" : "5cb356f4cdd00f1c79f52250f697a4007be22d55",
+        "version" : "0.1.0"
+      }
+    },
+    {
+      "identity" : "keychainaccess",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kishikawakatsumi/KeychainAccess",
+      "state" : {
+        "revision" : "84e546727d66f1adc5439debad16270d0fdd04e7",
+        "version" : "4.2.2"
+      }
+    },
+    {
+      "identity" : "sweet",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/zunda-pixel/Sweet",
+      "state" : {
+        "revision" : "69d9784ca5e0e2055a7b924defdb5290c485bbc7",
+        "version" : "2.1.3"
+      }
+    }
+  ],
+  "version" : 2
+}
