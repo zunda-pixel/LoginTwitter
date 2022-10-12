@@ -18,9 +18,6 @@
 		2E4B6AC128696A7200991438 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4B6AC028696A7200991438 /* Secret.swift */; };
 		2E4B6AC328696A7E00991438 /* SecurityRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4B6AC228696A7E00991438 /* SecurityRandom.swift */; };
 		2E4B6AC528696A8F00991438 /* Sweet+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4B6AC428696A8F00991438 /* Sweet+Extension.swift */; };
-		2E4B6AC728696AA100991438 /* TwitterOAuth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4B6AC628696AA100991438 /* TwitterOAuth2.swift */; };
-		2E4B6AC928696ABC00991438 /* TwitterScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4B6AC828696ABC00991438 /* TwitterScope.swift */; };
-		2E4B6ACB28696AD100991438 /* OAuth2ModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4B6ACA28696AD100991438 /* OAuth2ModelResponse.swift */; };
 		2E80C4E72875F42300EF8047 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80C4E62875F42300EF8047 /* AccountView.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,9 +33,6 @@
 		2E4B6AC028696A7200991438 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		2E4B6AC228696A7E00991438 /* SecurityRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityRandom.swift; sourceTree = "<group>"; };
 		2E4B6AC428696A8F00991438 /* Sweet+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sweet+Extension.swift"; sourceTree = "<group>"; };
-		2E4B6AC628696AA100991438 /* TwitterOAuth2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterOAuth2.swift; sourceTree = "<group>"; };
-		2E4B6AC828696ABC00991438 /* TwitterScope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterScope.swift; sourceTree = "<group>"; };
-		2E4B6ACA28696AD100991438 /* OAuth2ModelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2ModelResponse.swift; sourceTree = "<group>"; };
 		2E4B6ACC2869716D00991438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2E80C4E62875F42300EF8047 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,12 +73,9 @@
 				2E4B6AA7286969A100991438 /* LoginTwitterApp.swift */,
 				2E4B6AA9286969A100991438 /* ContentView.swift */,
 				2E4B6ABE28696A6200991438 /* DeepLink.swift */,
-				2E4B6AC828696ABC00991438 /* TwitterScope.swift */,
-				2E4B6ACA28696AD100991438 /* OAuth2ModelResponse.swift */,
 				2E4B6AC028696A7200991438 /* Secret.swift */,
 				2E4B6AC228696A7E00991438 /* SecurityRandom.swift */,
 				2E4B6AC428696A8F00991438 /* Sweet+Extension.swift */,
-				2E4B6AC628696AA100991438 /* TwitterOAuth2.swift */,
 				2E4B6AB6286969D800991438 /* LoginView.swift */,
 				2E80C4E62875F42300EF8047 /* AccountView.swift */,
 				2E4B6AAB286969A300991438 /* Assets.xcassets */,
@@ -182,13 +173,10 @@
 			files = (
 				2E4B6AB7286969D800991438 /* LoginView.swift in Sources */,
 				2E4B6AC128696A7200991438 /* Secret.swift in Sources */,
-				2E4B6ACB28696AD100991438 /* OAuth2ModelResponse.swift in Sources */,
 				2E4B6AC328696A7E00991438 /* SecurityRandom.swift in Sources */,
 				2E80C4E72875F42300EF8047 /* AccountView.swift in Sources */,
 				2E4B6ABF28696A6200991438 /* DeepLink.swift in Sources */,
-				2E4B6AC728696AA100991438 /* TwitterOAuth2.swift in Sources */,
 				2E4B6AAA286969A100991438 /* ContentView.swift in Sources */,
-				2E4B6AC928696ABC00991438 /* TwitterScope.swift in Sources */,
 				2E4B6AC528696A8F00991438 /* Sweet+Extension.swift in Sources */,
 				2E4B6AA8286969A100991438 /* LoginTwitterApp.swift in Sources */,
 			);
