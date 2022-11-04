@@ -20,11 +20,9 @@ extension Sweet {
       try await Sweet.updateUserBearerToken()
     }
 
-    let userBearerToken = Secret.userBearerToken!
+    let token: Sweet.AuthorizationType = .oAuth2user(token: Secret.userBearerToken!)
 
-    let appBearerToken = ""
-
-    self.init(app: appBearerToken, user: userBearerToken, session: .shared)
+    self.init(token: token, config: .default)
     self.tweetFields = Sweet.TweetField.allCases.filter { $0 != .privateMetrics && $0 != .promotedMetrics && $0 != .organicMetrics }
     self.mediaFields = Sweet.MediaField.allCases.filter { $0 != .privateMetrics && $0 != .promotedMetrics && $0 != .organicMetrics}
   }

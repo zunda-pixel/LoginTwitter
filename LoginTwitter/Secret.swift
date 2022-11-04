@@ -3,8 +3,8 @@ import KeychainAccess
 import Sweet
 
 struct Secret {
-  static let clientID = ""
-  static let clientSecretKey = ""
+  static let clientID: String = <#CLIENT_ID#>
+  static let clientSecretKey: String = <#CLIENT_SECRET_KEY#>
 
   static let callBackURL: URL = .init(string: "loginTwitter://")!
 

@@ -47,10 +47,9 @@ struct LoginView: View {
 
   func getMe() async {
     do {
-      let response = try await Sweet().lookUpMe()
+      let response = try await Sweet().me()
       me = response.user
       updateSecretData()
-
     } catch {
       print(error)
     }
